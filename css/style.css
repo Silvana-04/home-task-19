@@ -1,0 +1,101 @@
+.background{
+    background: url(../img/grass-background.jpg);
+    width: 1910px;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+}
+
+.ball{
+    border-radius: 50%;
+    width: 150px;
+    z-index: 5;
+    position: absolute;
+    animation-name: falling-ball, spinning-ball, ball-shadow;
+    animation-duration: 5s,2s,5s;
+    animation-delay: 1s,0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-timing-function:cubic-bezier(.17,.67,.83,.67);
+}
+
+@keyframes ball-shadow{
+    0% {
+        bottom: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    30% {
+        bottom: 50px;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        bottom: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    70% {
+        bottom: 50px;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    }
+    90% {
+        bottom: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        bottom: 50px;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes spinning-ball{
+    to {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes falling-ball{
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    10% {
+        left: 200px;
+        top: 200px;
+    }
+    20% {
+        left: 300px;
+        top: 300px;
+    }
+    30% {
+        left: 455px;
+        top: 465px;
+    }
+    40% {
+        left: 625px;
+        top: 300px;
+    }
+    50% {
+        left: 800px;
+        top: 200px;
+    }
+    60% {
+        left: 965px;
+        top: 300px;
+    }
+    70% {
+        left: 1130px;
+        top: 465px;
+    }
+    80% {
+        left: 1430px;
+        top: 300px;
+    }
+    90% {
+        left: 1700px;
+        top: 465px;
+    }
+    100% {
+        left: 1750px;
+        top: 465px;
+    }
+}
