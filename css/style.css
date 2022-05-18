@@ -49,7 +49,7 @@
 
 @keyframes spinning-ball{
     to {
-        transform: rotate(270deg);
+        transform: rotate(360deg);
     }
 }
 
